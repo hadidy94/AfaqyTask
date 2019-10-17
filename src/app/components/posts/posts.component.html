@@ -1,0 +1,35 @@
+<div class="pageTitle">
+  <div class="container">
+    <h1>Posts</h1>
+  </div>
+</div>
+<section class="posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6" *ngFor="let post of pageOfItems; index as i">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a [routerLink]="['/post', post.id]" >
+                {{ post.title }}
+              </a>
+            </h5>
+            <p class="card-text">
+              {{ post.body }}
+            </p>
+            <div class="cardDirect">
+              <a [routerLink]="['/post', post.id]" class="btn btn-af">View More</a>
+              <button (click)="deletePost( post.id)"  class="btn btn-aff">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer pb-0 pt-3 text-center">
+    <jw-pagination
+      [items]="posts"
+      (changePage)="onChangePage($event)"
+    ></jw-pagination>
+  </div>
+</section>

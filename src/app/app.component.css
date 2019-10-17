@@ -1,0 +1,23 @@
+.logoArea {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.areaCon {
+    width          : 200px;
+    height         : 85px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    background     : #fff;
+}
+
+.areaCon img {
+    height: 40px;
+}

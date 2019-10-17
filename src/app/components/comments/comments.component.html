@@ -1,0 +1,10 @@
+<h2>Comments</h2>
+<div class="commentContainer" *ngFor="let comment of comments">
+  <div class="media">
+    <img src="../../../assets/img/user.png" class="mr-3" alt="..." />
+    <div class="media-body">
+      <h5 class="mt-0">{{comment.name}}</h5>
+      {{comment.body}}
+    </div>
+  </div>
+</div>
